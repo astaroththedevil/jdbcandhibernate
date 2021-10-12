@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="51871b46-e13f-41a5-874e-c170e48fe6ae" name="jdbcandhibernate" url="jdbc:mysql://localhost/sakila?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC" driverClass="com.mysql.jdbc.Driver" />
+      <data-source id="5bf6ea6f-5440-4800-871c-7b11f8646981" name="mybase" url="jdbc:mysql://sql65.lh.pl/serwer103916_mainbase?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC" driverClass="com.mysql.jdbc.Driver" />
+    </data-sources>
+  </component>
+</project>
