@@ -1,12 +1,23 @@
-<!DOCTYPE hibernate-configuration PUBLIC
-        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
-        "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">
+<?xml version='1.0' encoding='utf-8'?><!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://sql65.lh.pl/serwer103916_mainbase</property>
-        <property name="connection.username">serwer103916</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">
+            jdbc:mysql://localhost:3306/sakila?useSSL=false&amp;serverTimezone=CET
+        </property>
+        <property name="connection.username">root</property>
         <property name="connection.password">adminadmin</property>
+        <property name="connection.pool_size">5</property>
         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.connection.autocommit">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.show_sql">true</property>
+        <mapping class="hibernate.entities.Games"/>
+        <!--<property name="cache.provider_class">
+            org.hibernate.cache.internal.NoCacheProvider
+        </property>-->
     </session-factory>
 </hibernate-configuration>
