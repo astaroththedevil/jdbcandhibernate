@@ -12,8 +12,7 @@ public class GamesUpdating {
 
         entityManager.getTransaction().begin();
 
-        Games game = new Games();
-        game = entityManager.find(Games.class, 3);
+        Games game = entityManager.find(Games.class, 3);
         game.setYear(2019);
 
         entityManager.merge(game);
