@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 
-public class GamesAdd {
+public class GamesTableAdd {
     final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     final EntityManager entityManager = sessionFactory.createEntityManager();
 
