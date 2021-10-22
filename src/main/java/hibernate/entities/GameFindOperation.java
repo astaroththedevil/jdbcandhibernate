@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 
-public class GamesFinding {
+public class GameFindOperation {
     public static void main(String[] args) {
 
         final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
@@ -13,7 +13,7 @@ public class GamesFinding {
 
         entityManager.getTransaction().begin();
 
-        Games result = entityManager.find(Games.class, 2);
+        Game result = entityManager.find(Game.class, 2);
         System.out.println(result.getTitle() + "\n" + result.getDeveloper());
 
         entityManager.getTransaction().commit();

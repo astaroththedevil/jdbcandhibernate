@@ -5,17 +5,16 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 
-public class GamesUpdating {
+public class GameDeleteOperation {
     public static void main(String[] args) {
+
         final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         final EntityManager entityManager = sessionFactory.createEntityManager();
 
         entityManager.getTransaction().begin();
 
-        Games game = entityManager.find(Games.class, 3);
-        game.setYear(2019);
-
-        entityManager.merge(game);
+        Game result = entityManager.find(Game.class, 5);
+        entityManager.remove(result);
 
         entityManager.getTransaction().commit();
 

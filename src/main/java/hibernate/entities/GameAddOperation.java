@@ -5,12 +5,12 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 
-public class GamesAdding {
+public class GameAddOperation {
     public static void main(String[] args) {
         final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         final EntityManager entityManager = sessionFactory.createEntityManager();
 
-        Games game = new Games();
+        Game game = new Game();
         game.setTitle("Grand Theft Auto V");
         game.setDeveloper("Rockstar Games");
         game.setYear(2014);
