@@ -16,6 +16,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
         <mapping class="hibernate.entities.Game"/>
+        <mapping class="hibernate.entities.User"/>
         <!--<property name="cache.provider_class">
             org.hibernate.cache.internal.NoCacheProvider
         </property>-->

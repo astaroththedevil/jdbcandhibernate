@@ -5,22 +5,18 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 
-public class GameAddOperation {
+public class UserAddOperation {
     public static void main(String[] args) {
+
         final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         final EntityManager entityManager = sessionFactory.createEntityManager();
 
-        Game game = new Game();
-        game.setTitle("Spiderman");
-        game.setDeveloper("Insomniac Games");
-        game.setYear(2018);
+        User user = new User();
+        user.setFirstName("Filip");
+        user.setLastName("Król");
 
         entityManager.getTransaction().begin();
-
-        entityManager.persist(game);
-
+        entityManager.persist(user);
         entityManager.getTransaction().commit();
-
-        HibernateUtil.shutdown();
     }
 }

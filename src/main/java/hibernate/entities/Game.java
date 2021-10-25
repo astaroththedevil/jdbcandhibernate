@@ -1,9 +1,14 @@
 package hibernate.entities;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.Objects;
 
-
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
 @Entity
 @Table(name = "games")
 public class Game {
@@ -21,59 +26,4 @@ public class Game {
 
     @Column(name = "year")
     private int year;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDeveloper() {
-        return developer;
-    }
-
-    public void setDeveloper(String developer) {
-        this.developer = developer;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    @Override
-    public String toString() {
-        return "Games{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", developer='" + developer + '\'' +
-                ", year=" + year +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Game game = (Game) o;
-        return year == game.year && Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(developer, game.developer);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, title, developer, year);
-    }
 }

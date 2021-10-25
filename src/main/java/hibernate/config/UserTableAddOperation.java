@@ -1,17 +1,17 @@
-package hibernate.entities;
+package hibernate.config;
 
-import hibernate.config.HibernateUtil;
+import hibernate.entities.User;
 import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 
-public class GameTableAddOperation {
+public class UserTableAddOperation {
     final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     final EntityManager entityManager = sessionFactory.createEntityManager();
 
-    public void addGamesTable(Game game) {
+    public void addUsersTable(User user) {
         entityManager.getTransaction().begin();
-        entityManager.persist(game);
+        entityManager.persist(user);
         entityManager.getTransaction().commit();
 
         HibernateUtil.shutdown();
