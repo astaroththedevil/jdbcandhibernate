@@ -17,21 +17,21 @@ public class BooksAddingOperation {
             Session session = sessionFactory.openSession();
             session.getTransaction().begin();
 
-//            Book book1 = new Book();
-//            book1.setId(1);
-//            book1.setTitle("Biała Gorączka");
-//            book1.setAuthor("Jacek Hugo-Bader");
-//            book1.setPrice(20d);
-//            book1.setQty(10);
-//            session.save(book1);
-//
-//            Book book2 = new Book();
-//            book2.setId(2);
-//            book2.setTitle("Dzienniki Kołymskie");
-//            book2.setAuthor("Jacek Hugo-Bader");
-//            book2.setPrice(30d);
-//            book2.setQty(20);
-//            session.save(book2);
+            Book book1 = new Book();
+            book1.setId(1);
+            book1.setTitle("Biała Gorączka");
+            book1.setAuthor("Jacek Hugo-Bader");
+            book1.setPrice(20d);
+            book1.setQty(10);
+            session.save(book1);
+
+            Book book2 = new Book();
+            book2.setId(2);
+            book2.setTitle("Dzienniki Kołymskie");
+            book2.setAuthor("Jacek Hugo-Bader");
+            book2.setPrice(30d);
+            book2.setQty(20);
+            session.save(book2);
 
             Book book3 = new Book();
             book3.setId(3);
